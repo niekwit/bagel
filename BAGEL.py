@@ -1096,9 +1096,8 @@ def calculate_precision_recall(bayes_factors, output_file, essential_genes, non_
             fout.write('{0:s}\t{1:4.3f}\t{2:4.3f}\t{3:4.3f}\t{4:4.3f}\n'.format(g, bf.loc[g, bf_column], recall, precision, 1.0-precision))
 
 
-if __name__ == '__main__':
-    bagel.add_command(calculate_fold_change)
-    bagel.add_command(calculate_bayes_factors)
-    bagel.add_command(calculate_precision_recall)
-    bagel.add_command(report_bagel_version)
-    bagel()
+bagel.add_command(calculate_fold_change)
+bagel.add_command(calculate_bayes_factors)
+bagel.add_command(calculate_precision_recall)
+bagel.add_command(report_bagel_version)
+bagel()
